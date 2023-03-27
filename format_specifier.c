@@ -24,9 +24,9 @@ int print_str(va_list list)
 	if (str == NULL)
 		str = "(null)";
 	for (i = 0; str[i] != '\0'; i++)
-	{		
+	{
 		_write_char(str[i]);
-	}	
+	}
 	return (i);
 }
 
