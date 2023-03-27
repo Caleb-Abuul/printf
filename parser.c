@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * parser - parses thegiven input
  * @format: a pointer the string
