@@ -34,8 +34,8 @@ int parser(const char *format, convert_t f_list[], va_list arg_list)
 			{
 				if (format[i + 1] != '\0')
 				{
-					_write(format[i]);
-					_write(format[i + 1]);
+					_write_char(format[i]);
+					_write_char(format[i + 1]);
 					count = count + 2;
 				}
 				else
@@ -49,7 +49,7 @@ int parser(const char *format, convert_t f_list[], va_list arg_list)
 		}
 		else
 		{
-			_write(format[i]);
+			_write_char(format[i]);
 			count++;
 		}
 	}

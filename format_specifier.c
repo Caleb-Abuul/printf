@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 /**
  * print_char - prints a character
  * @list: a list of arguments
@@ -7,7 +6,7 @@
  */
 int print_char(va_list list)
 {
-	_write(va_arg(list, int));
+	_write_char(va_arg(list, int));
 	return (1);
 }
 
@@ -26,7 +25,7 @@ int print_str(va_list list)
 		str = "(null)";
 	for (i = 0; str[i] != '\0'; i++)
 	{		
-		_write(str[i]);
+		_write_char(str[i]);
 	}	
 	return (i);
 }
@@ -38,6 +37,6 @@ int print_str(va_list list)
  */
 int print_percent(__attribute__((unused))va_list list)
 {
-	_write('%');
+	_write_char('%');
 	return (1);
 }
