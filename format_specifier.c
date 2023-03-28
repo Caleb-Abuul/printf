@@ -84,3 +84,46 @@ int print_d(va_list list)
 	}
 	return (k);
 }
+/**
+*print_i - to print an integer
+*@list: an arguments list
+*Return: Always 0 (Success)
+*/
+int print_i(va_list list)
+{
+	int m, c, i, k, n;
+
+	char arr[100000];
+
+	c = 0;
+	k = 0;
+	n = va_arg(list, int);
+	if (n <= 0)
+	{
+		if (n == 0)
+		{
+			_write_char('0');
+			return (1);
+		}
+		n *= -1;
+		k = 1;
+		write(1, "-", 1);
+	}
+	m = n;
+	while (n != 0)
+	{
+		c++;
+		n /= 10;
+	}
+	k += c;
+	for (i = 0; i < c; i++)
+	{
+		arr[i] = (m % 10) + 48;
+		m /= 10;
+	}
+	for (i = c - 1; i >= 0; i--)
+	{
+		write(1, &arr[i], 1);
+	}
+	return (k);
+}
