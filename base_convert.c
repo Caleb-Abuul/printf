@@ -41,3 +41,25 @@ int print_binary(va_list list)
 	free(rev_str);
 	return (len);
 }
+/**
+ * hex_check - checks which hex function calls
+ * @num: number to convert
+ * @x: hex function calling
+ * Return: ASCII value for letter
+ */
+int hex_check(int num, char x)
+{
+	char *hex = "abcdef";
+	char *Hex = "ABCDEF";
+
+	num = num - 10;
+	if (x == 'x')
+	{
+		return (hex[num]);
+	}
+	else
+	{
+		return (Hex[num]);
+	}
+	return (0);
+}
