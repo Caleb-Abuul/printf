@@ -26,5 +26,12 @@ int print_char(va_list);
 int print_str(va_list);
 int print_percent(va_list);
 int print_d(va_list);
+int print_binary(va_list);
+/* func aids */
+unsigned int base_len(unsigned int, int);
+char *rev_string(char *);
+void write_base(char *str);
+char *_memcpy(char *des, char *src, unsigned int n);
+int print_unsigned_number(unsigned int);
 
 #endif
