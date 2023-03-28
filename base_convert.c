@@ -17,8 +17,6 @@ int print_binary(va_list list)
 	num = va_arg(list, unsigned int);
 	if (num == 0)
 		return (_write_char('0'));
-	if (num < 0)
-		return (-1);
 	len = base_len(num, 2);
 	string = malloc(sizeof(char) * len + 1);
 	if (string == NULL)
@@ -40,4 +38,26 @@ int print_binary(va_list list)
 	free(string);
 	free(rev_str);
 	return (len);
+}
+/**
+ * hex_check - checks which hex function calls
+ * @num: number to convert
+ * @x: hex function calling
+ * Return: ASCII value for letter
+ */
+int hex_check(int num, char x)
+{
+	char *hex = "abcdef";
+	char *Hex = "ABCDEF";
+
+	num = num - 10;
+	if (x == 'x')
+	{
+		return (hex[num]);
+	}
+	else
+	{
+		return (Hex[num]);
+	}
+	return (0);
 }
