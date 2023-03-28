@@ -7,10 +7,10 @@
 #include <unistd.h>
 
 /**
- * convert - structures for specifiers and corres-
- * ponding functions
- * @sym: the specifier
- * @f: corresponding function
+ *convert - structures for specifiers and corres
+ *ponding functions
+ *@sym: the specifier
+ *@f: corresponding function
  */
 
 typedef struct convert
@@ -33,5 +33,9 @@ char *rev_string(char *);
 void write_base(char *str);
 char *_memcpy(char *des, char *src, unsigned int n);
 int print_unsigned_number(unsigned int);
-
+/* task3 functions */
+int print_o(va_list list);
+int print_u(va_list list);
+int print_x(va_list list);
+int print_X(va_list list);
 #endif
