@@ -156,8 +156,6 @@ int print_X(va_list list)
 		c++;
 	}
 	for (i = c - 1; i >= 0; i--)
-	{
 		write(1, &arr[i], 1);
-	}
 	return (c);
 }
