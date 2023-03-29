@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		{"x", print_x},
 		{"X", print_X},
 		{"S", print_S},
+		{"p", print_pointer},
 		{NULL, NULL}};
 	va_list arg_list;
 
