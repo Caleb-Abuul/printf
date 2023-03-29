@@ -159,3 +159,45 @@ int print_X(va_list list)
 		write(1, &arr[i], 1);
 	return (c);
 }
+/**
+*hexa - a function to converst into hexadecimal
+*@n: a decimal integer
+*Return: Always 0 (Success)
+*/
+int hexa(int n)
+{
+	long i, c;
+
+	char arr[10000];
+
+	c = 0;
+	if (n < 0)
+	{
+		n = 2147483647 - (2147483647 - (n));
+	}
+	while (n != 0)
+	{
+		if (n % 16 > 9)
+		{
+			arr[c] = (n % 16) + 55;
+			n /= 16;
+		}
+		else
+		{
+			arr[c] = (n % 16) + 48;
+			n /= 16;
+		}
+		c++;
+	}
+	if (c == 1)
+	{
+		write(1, "0", 1);
+	}
+	for (i = c - 1; i >= 0; i--)
+	{
+		write(1, &arr[i], 1);
+	}
+	if (c == 1)
+		c++;
+	return (c);
+}

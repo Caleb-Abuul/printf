@@ -38,4 +38,7 @@ int print_o(va_list list);
 int print_u(va_list list);
 int print_x(va_list list);
 int print_X(va_list list);
+/* task5 */
+int print_S(va_list);
+int hexa(int);
 #endif
