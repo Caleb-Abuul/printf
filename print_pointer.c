@@ -18,8 +18,8 @@ int print_pointer(va_list list)
 	size = print("0x");
 	if (!_strcmp(p_buffer, "-1"))
 		size += print("ffffffffffffffff");
-	else
-		size += printf(p_buffer);
+	/*else
+		size +=  printf(p_buffer);*/
 	return (size);
 }
 /**
