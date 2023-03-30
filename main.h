@@ -40,12 +40,12 @@ int print_x(va_list list);
 int print_X(va_list list);
 /* task5 */
 int print_S(va_list);
-int hexa(int)
+int hexa(int);
 /* task 6 */
 char *int_to_a(long int, int);
-int _strcmp(char, char);
+int _strcmp(char *, char *);
 int print_pointer(va_list);
-int print(char);
 int buffer(char);
+int print(char *);
 
 #endif
