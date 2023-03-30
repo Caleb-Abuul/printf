@@ -32,3 +32,30 @@ int print_S(va_list list)
 	}
 	return (c);
 }
+/**
+*print_r - function to print a reversed string
+*@list: an arguments list
+*Return: Always 0 (Success)
+*/
+int print_r(va_list list)
+{
+	char *s;
+
+	int n, c;
+
+	n = 0;
+	c = 0;
+	s = va_arg(list, char *);
+	while (s[n] != '\0')
+	{
+		n++;
+	}
+	c = n;
+	n--;
+	while (n >= 0)
+	{
+		_write_char(s[n]);
+		n--;
+	}
+	return (c);
+}

@@ -47,5 +47,6 @@ int _strcmp(char *, char *);
 int print_pointer(va_list);
 int buffer(char);
 int print(char *);
-
+/* task13 */
+int print_r(va_list);
 #endif
