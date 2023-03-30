@@ -46,5 +46,6 @@ char *int_to_a(long int, int);
 int _strcmp(char, char);
 int print_pointer(va_list);
 int print(char);
+int buffer(char);
 
 #endif
