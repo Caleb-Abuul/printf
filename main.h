@@ -49,4 +49,6 @@ int buffer(char);
 int print(char *);
 /* task13 */
 int print_r(va_list);
+/**/
+int rot13(va_list list);
 #endif
